@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700;900&display=swap');
+
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	position: relative;
+}
+body::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0.8;
+	background-color: #000;
+	transition: opacity 3s ease 1s;
+	z-index: 2;
+}
+
+body:hover::before{
+	opacity: 0;
+}
+
+.practice {
+	font-family: "Kanit";
+}
+.practice__conteiner {
+	max-width: 1240px;
+	margin: 0 auto;
+}
+.practice__heading {
+	padding-top: 20px;
+}
+.heading {
+}
+.practice__title {
+	font-size: 42px;
+	font-weight: 900;
+	line-height: 1.5;
+	animation: title 1s ease forwards;
+	transform: translate(-200%, 0px);
+	opacity: 0;
+}
+
+.practice__title:not(:last-child){
+	margin-bottom: 20px;
+}
+.practice__subtitle {
+	font-size: 30px;
+	font-weight: 700;
+	animation: title 1.5s ease 0.5s forwards;
+	transform: translate(200%, 0px);
+	opacity: 0;
+}
+.practice__subtitle:not(:last-child) {
+	margin-bottom: 15px;
+}
+.practice__text {
+	font-weight: 700;
+	line-height: 1.5;
+	font-size: 18px;
+	animation: title 2s ease 1s forwards;
+	line-height: 1.5;
+	transform: translate(0px, 50%);
+	opacity: 0;
+	margin-bottom: 20px;
+}
+@keyframes title {
+	0% {
+	}
+	100% {
+		transform: translate(0px, 0%);
+		opacity: 1;
+	}
+}
+.practice__block-hover{
+	max-width: 100%;
+	height: 340px;
+	border: 1px solid black;
+	padding: 20px;
+	background-color: rgba(122, 122, 122, 0.282);
+}
+.practice__circle--red {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: red;
+	margin-bottom: 20px;
+	position: relative;
+	animation-name: circle-red;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes circle-red{
+	0%{
+	left: 0%;
+	}
+	50%{
+		width: 120px;
+		border-radius: 0%;
+	}
+	100%{
+	left: 90%;
+		background: yellow;
+		opacity: 0.5;
+	}
+}
+.practice__circle--blue {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: blue;
+	margin-bottom: 20px;
+	position: relative;
+	animation-name: circle-blue;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes circle-blue{
+	0%{
+	left: 0%;
+	}
+	50%{
+		border-radius: 0px;
+	}
+	100%{
+	left: 90%;
+	}
+}
+.practice__circle--green {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: green;
+	margin-bottom: 20px;
+	position: relative;
+	animation-name: circle-green;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 10;
+	animation-direction: alternate;
+}
+.practice__circle--green:hover{
+	animation-play-state: paused;
+}
+@keyframes circle-green{
+	0%{
+	left: 0%;
+	}
+	100%{
+	left: 90%;
+	}
+}
+.practice__circle--black {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: black;
+	position: relative;
+	animation: circle-black 2s linear infinite alternate-reverse running 0s forwards;
+}
+@keyframes circle-black{
+	0%{
+	left: 0%;
+	}
+	50%{
+		background-color: rgba(122, 122, 122, 0.282);
+		border: 1px solid black;
+	}
+	100%{
+	left: 90%;
+	}
